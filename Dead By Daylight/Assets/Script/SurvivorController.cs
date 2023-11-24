@@ -12,13 +12,14 @@ public enum PlayerStates
 public class SurvivorController : MonoBehaviour
 {
     public float moveSpeed;
+    private float health = 2;
 
-    private bool s_Move = true;
+    private bool isSurvMove = true;
 
-    private bool s_Walk;
-    private bool s_Run;
-    private bool s_Sit;
-    private bool s_SitWalk;
+    private bool isSurvWalk;
+    private bool isSurvRun;
+    private bool isSurvSit;
+    private bool isSurvSitWalk;
 
     Rigidbody surRigid;
     Vector3 surPos;
@@ -35,6 +36,7 @@ public class SurvivorController : MonoBehaviour
     {
         SurvivorMove();
         CheckState();
+        CheckHealth();
     }
 
 
@@ -95,4 +97,25 @@ public class SurvivorController : MonoBehaviour
         }
     }
 
+
+    private void CheckHealth()
+    {
+        switch(health)
+        {
+            case 2:
+                break;
+            case 1:
+                break;
+            case 0:
+                break;
+        }
+    }
+
+    public void Sethealth()
+    {
+        health--;
+        Debug.Log("살인마의 공격으로 다쳤습니다.");
+        Debug.Log(health);
+        // 무적상태로 만들기
+    }
 }
