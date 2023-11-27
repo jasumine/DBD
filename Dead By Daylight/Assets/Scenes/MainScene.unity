@@ -295,6 +295,7 @@ GameObject:
   - component: {fileID: 708218406}
   - component: {fileID: 708218405}
   - component: {fileID: 708218404}
+  - component: {fileID: 708218408}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -388,6 +389,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &708218408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708218403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36867689ab352a48a1c592ae380b5d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  repairValue: 0
+  damageValue: 0
+  isComplete: 0
+  isDamaged: 0
 --- !u!1 &1367836304
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +549,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4604935930095892905, guid: 40899a58a4d249e499b4f2e3edc81d70, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4604935930095892905, guid: 40899a58a4d249e499b4f2e3edc81d70, type: 3}
+      propertyPath: m_TagString
+      value: Killer
       objectReference: {fileID: 0}
     - target: {fileID: 5128787340273857932, guid: 40899a58a4d249e499b4f2e3edc81d70, type: 3}
       propertyPath: m_IsTrigger
