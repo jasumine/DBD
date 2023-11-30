@@ -50,15 +50,15 @@ public class Generator : MonoBehaviour
                 // 살인마인 경우 발전기 손상
                 if (Input.GetKey(KeyCode.Space) && !isDamaged)
                 {
-                    damageValue += 5f * Time.deltaTime;
+                    damageValue += Time.deltaTime;
                     if (damageValue >= 2)
                     {
                         isDamaged = true;
                     }
-                    else
-                    {
-                        damageValue = 0;
-                    }
+                }
+                else
+                {
+                    damageValue = 0;
                 }
             }
         }

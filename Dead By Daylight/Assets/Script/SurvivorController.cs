@@ -15,11 +15,13 @@ public class SurvivorController : MonoBehaviour
     private float health = 2;
 
     private bool isSurvMove = true;
-
     private bool isSurvWalk;
     private bool isSurvRun;
     private bool isSurvSit;
     private bool isSurvSitWalk;
+
+    public bool ishavingItem;
+
 
     Rigidbody surRigid;
     Vector3 surPos;
@@ -117,5 +119,15 @@ public class SurvivorController : MonoBehaviour
         Debug.Log("살인마의 공격으로 다쳤습니다.");
         Debug.Log(health);
         // 무적상태로 만들기
+    }
+
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Item")
+        {
+            // 아이템획득문구
+            Debug.Log("{0}을 획득했습니다.", other.name);
+        }
     }
 }
