@@ -30,6 +30,8 @@ public class Item : MonoBehaviour
         
     }
 
+ 
+
     void SetItem(ItemType _type)
     {
         switch(_type)

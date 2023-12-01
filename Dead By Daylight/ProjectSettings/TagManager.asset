@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Survivor
   - Killer
+  - Item
   layers:
   - Default
   - TransparentFX

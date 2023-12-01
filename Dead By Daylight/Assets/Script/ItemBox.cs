@@ -50,6 +50,7 @@ public class ItemBox : MonoBehaviour
 
     private void GetItem()
     {
+        // 아이템이 랜덤으로 생성되어야함.
         Debug.Log("아이템을 획득했습니다!");
     }
 }
