@@ -14,6 +14,8 @@ public class KillerController : MonoBehaviour
     private bool isKillMove = true;
     public bool isActive = false;
 
+    public bool isAI = true;
+
 
     Rigidbody killRigid;
     Vector3 killPos;
@@ -26,8 +28,11 @@ public class KillerController : MonoBehaviour
 
     private void Update()
     {
-        KillerMove();
-        KillerAbillity();
+        if (isAI == false)
+        {
+            KillerMove();
+            KillerAbillity();
+        }
     }
 
     private void KillerMove()

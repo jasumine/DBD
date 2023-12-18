@@ -18,7 +18,7 @@ public class Item : MonoBehaviour
     public string itemName;
     public string itemDescription;
 
-    private bool isUse;
+    public bool isUse;
     
     void Start()
     {
@@ -27,7 +27,7 @@ public class Item : MonoBehaviour
 
     void Update()
     {
-        
+        CheckDurability();
     }
 
  

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public enum PlayerStates
 {
@@ -23,8 +22,9 @@ public class SurvivorController : MonoBehaviour
     private bool isSurvSit;
     private bool isSurvSitWalk;
 
-    public bool ishavingItem;
-    public bool isFrontItem;
+    private bool ishavingItem;
+    private bool isFrontItem;
+    public bool isAI = false;
 
     public GameObject havingItem;
     public Transform itemPutOnPos;
@@ -43,21 +43,24 @@ public class SurvivorController : MonoBehaviour
 
     private void Update()
     {
-        SurvivorMove();
-        CheckState();
-        CheckHealth();
-        CheckObject();
-
-
-        if (ishavingItem == true && isSurvMove == true && isFrontItem==false)
+        if (isAI == false)
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                StartCoroutine(ThrowItem());
+            SurvivorMove();
+            CheckState();
+            CheckHealth();
+            CheckObject();
+            UsingItem();
 
-                Debug.Log("아이템 Throw");
+            if (ishavingItem == true && isSurvMove == true && isFrontItem == false)
+            {
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    StartCoroutine(ThrowItem());
+
+                    Debug.Log("아이템 Throw");
+                }
+
             }
-               
         }
     }
 
@@ -140,6 +143,20 @@ public class SurvivorController : MonoBehaviour
         Debug.Log(health);
         // 무적상태로 만들기
     }
+
+
+    private void UsingItem()
+    {
+        if(ishavingItem == true)
+        {
+            Item item = havingItem.GetComponent<Item>();
+            if (item.isUse == true &&Input.GetMouseButton(1))
+            {
+                item.itemDurability -= 1 * Time.deltaTime;
+            }
+        }
+    }
+
 
     private void CheckObject()
     {

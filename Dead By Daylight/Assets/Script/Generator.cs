@@ -11,6 +11,13 @@ public class Generator : MonoBehaviour
     public bool isComplete = false;
     public bool isDamaged = false;
 
+    private bool isSkillCheck = false;
+    private bool isArrowRotate = false;
+    public GameObject SkillCheckUI;
+    public GameObject CircleUI;
+    public RectTransform ArrowUI;
+
+
     private void Start()
     {
         repairValue = 0;
@@ -22,6 +29,20 @@ public class Generator : MonoBehaviour
         if(isDamaged)
         {
             ReduceRepairValue();
+        }
+
+        if (Input.GetKeyDown("Space"))
+        {
+            Debug.Log("space");
+            isArrowRotate = false;
+        }
+
+        if (isArrowRotate)
+        {
+            if (ArrowUI.rotation.z >= -360)
+            {
+                ArrowUI.Rotate(0f, 0f, -4f * Time.deltaTime * 100);
+            }
         }
     }
 
@@ -36,13 +57,12 @@ public class Generator : MonoBehaviour
                 if (Input.GetMouseButton(0))
                 {
                     isDamaged = false;
-                    repairValue += 30f * Time.deltaTime;
+                    Rapairing();
                     if (repairValue >= 100)
                     {
-                        isComplete = true;
+                        CompleteGenerator();
                     }
                 }
-                
             }
 
             if (collision.gameObject.tag == "Killer")
@@ -64,8 +84,55 @@ public class Generator : MonoBehaviour
         }
     }
 
+ 
+    private void Rapairing()
+    {
+        repairValue += 1f * Time.deltaTime;
+
+        float randomValue = Random.Range(0f, 200f);
+        if (randomValue <= 5f && isSkillCheck == false)
+        {
+            // 확률로 스킬체크 발생
+            StartCoroutine(SkillCheck());
+        }
+    }
+
+    IEnumerator SkillCheck()
+    {
+        Debug.Log("발전기 스킬체크 발생");
+        isSkillCheck = true;
+        // 오디오가 들리고
+        yield return new WaitForSeconds(0.3f);
+
+        // 스킬체크 화면 출력
+        SkillCheckUI.SetActive(true);
+        float zC = Random.Range(-116, -316);
+        CircleUI.transform.rotation = Quaternion.Euler(0, 0, zC);
+
+        // 화살표 회전
+        ArrowUI.transform.Rotate(0, 0, 0);
+        isArrowRotate = true;
+
+
+
+        yield return new WaitForSeconds(4f);
+        SkillCheckUI.SetActive(false);
+        isSkillCheck = false;
+        isArrowRotate = false;
+    }
+
+
     private void ReduceRepairValue()
     {
         repairValue -= 0.1f * Time.deltaTime;
+    }
+
+
+    private void CompleteGenerator()
+    {
+        isComplete = true;
+        // 발전기 수리가 완성되면 해야 하는 작업
+        Renderer render = GetComponent<Renderer>();
+        render.material.color = Color.white;
     }
 }
