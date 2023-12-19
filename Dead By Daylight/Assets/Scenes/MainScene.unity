@@ -890,7 +890,7 @@ RectTransform:
   m_GameObject: {fileID: 2106874853}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.034365237, y: 0.5007115, z: 1}
+  m_LocalScale: {x: 0.016719032, y: 0.5007115, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1044663841}
@@ -953,7 +953,7 @@ PrefabInstance:
     - target: {fileID: 1442462265581633920, guid: 48ade51ef94bdd24894880c0a585309d, type: 3}
       propertyPath: CircleUI
       value: 
-      objectReference: {fileID: 1412255209}
+      objectReference: {fileID: 1412255210}
     - target: {fileID: 1442462265581633920, guid: 48ade51ef94bdd24894880c0a585309d, type: 3}
       propertyPath: SkillCheckUI
       value: 
