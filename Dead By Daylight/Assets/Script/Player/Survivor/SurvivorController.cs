@@ -13,10 +13,11 @@ public enum PlayerStates
 public class SurvivorController : MonoBehaviour
 {
     public float moveSpeed;
-    private float health = 2;
+    public int health = 2;
     public float delayTime;
 
     public bool isSurvMove = true;
+    public bool isCarried = false;
     private bool isSurvWalk;
     private bool isSurvRun;
     private bool isSurvSit;
@@ -25,9 +26,18 @@ public class SurvivorController : MonoBehaviour
     private bool ishavingItem;
     private bool isFrontItem;
     public bool isAI = false;
+    public bool isSuperMode = false;
+
+    float struggleValueMax = 100;
+    float struggle = 0;
+    bool isA = false;
+    bool isD = true;
+
 
     public GameObject havingItem;
     public Transform itemPutOnPos;
+
+    public HookGauge hookGauge;
 
     Rigidbody surRigid;
     Vector3 surPos;
@@ -47,8 +57,8 @@ public class SurvivorController : MonoBehaviour
         {
             SurvivorMove();
             CheckState();
-            CheckHealth();
             CheckObject();
+            CheckHealth();
             UsingItem();
 
             if (ishavingItem == true && isSurvMove == true && isFrontItem == false)
@@ -62,36 +72,74 @@ public class SurvivorController : MonoBehaviour
 
             }
         }
+        else
+        {
+            CheckState();
+            CheckHealth();
+
+        }
+
     }
+
+    
 
 
     private void SurvivorMove()
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        switch (playerState)
+        if (isSurvMove == true)
         {
-            case PlayerStates.Idle:
-                surPos = new Vector3(x, 0f, z).normalized * moveSpeed * Time.deltaTime;
-                surRigid.MovePosition(transform.position + surPos);
-                break;
-            case PlayerStates.Run:
-                surPos = new Vector3(x, 0f, z).normalized * (moveSpeed *2.5f) * Time.deltaTime;
-                surRigid.MovePosition(transform.position + surPos);
-                break;
-            case PlayerStates.Sit:
-                Renderer render = GetComponent<Renderer>();
-                render.material.color = Color.yellow;
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
 
-                surPos = new Vector3(x, 0f, z).normalized * (moveSpeed*0.5f )* Time.deltaTime;
-                surRigid.MovePosition(transform.position + surPos);
-                break;
+            switch (playerState)
+            {
+                case PlayerStates.Idle:
+                    surPos = new Vector3(x, 0f, z).normalized * moveSpeed * Time.deltaTime;
+                    surRigid.MovePosition(transform.position + surPos);
+                    break;
+                case PlayerStates.Run:
+                    surPos = new Vector3(x, 0f, z).normalized * (moveSpeed * 2.5f) * Time.deltaTime;
+                    surRigid.MovePosition(transform.position + surPos);
+                    break;
+                case PlayerStates.Sit:
+                    Renderer render = GetComponent<Renderer>();
+                    render.material.color = Color.yellow;
+
+                    surPos = new Vector3(x, 0f, z).normalized * (moveSpeed * 0.5f) * Time.deltaTime;
+                    surRigid.MovePosition(transform.position + surPos);
+                    break;
+
+
+            }
+        }
+
+        if(isCarried == true)
+        {
+            // a d를 눌러서 발버둥 친다.
+            if(struggle < struggleValueMax)
+            {
+                if (Input.GetKeyDown(KeyCode.A) && isA == false && isD == true)
+                {
+
+                }
+                if (Input.GetKeyDown(KeyCode.D))
+                {
+
+                }
+            }
+            else
+            {
+                isCarried = false;
+
+                // 킬러에게서 떨어지도록 하기.
+            }
+            
+
+
+
 
 
         }
-
-
     }
 
     private void CheckState()
@@ -130,19 +178,52 @@ public class SurvivorController : MonoBehaviour
             case 2:
                 break;
             case 1:
+                
                 break;
             case 0:
+                moveSpeed = 2;
+               
                 break;
         }
     }
 
     public void Sethealth()
     {
-        health--;
-        Debug.Log("살인마의 공격으로 다쳤습니다.");
-        Debug.Log(health);
-        // 무적상태로 만들기
+        if(isSuperMode == false && health == 2)
+        {
+            health--;
+            Debug.Log("살인마의 공격으로 다쳤습니다.");
+            Debug.Log(health);
+            StartCoroutine(SuperMode());
+        }
+        if(isSuperMode == false && health == 1)
+        {
+            health--;
+            Debug.Log("살인마의 공격으로 다쳤습니다.");
+            Debug.Log(health);
+        }
     }
+
+    public int GetHealth()
+    {
+        return health;
+    }
+
+    IEnumerator SuperMode()
+    {
+        isSuperMode = true;
+        // 다른 오브젝트끼리는 부딪혀도, 생존자, 살인마, 살인마무기는 통과하도록 레이어 설정
+        this.gameObject.layer = 8;
+        moveSpeed += 5;
+        Debug.Log(moveSpeed);
+
+        yield return new WaitForSeconds(2f);
+        moveSpeed -= 5;
+        isSuperMode = false;
+        Debug.Log(moveSpeed);
+        this.gameObject.layer = 6; // survivor layer
+    }
+
 
 
     private void UsingItem()

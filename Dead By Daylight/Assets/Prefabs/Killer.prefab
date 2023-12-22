@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5128787340273857932}
   - component: {fileID: 1804087839934502629}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 6969875837040627830}
   - component: {fileID: 4916891462360997009}
   - component: {fileID: 6553339715810290120}
+  - component: {fileID: 4388777900322376509}
   m_Layer: 0
   m_Name: Killer
   m_TagString: Untagged
@@ -377,6 +378,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103124489cdd1c34d806e0036e2495d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponCollider: {fileID: 0}
   moveSpeed: 15
   specialAbilityCount: 0
   isActive: 0
+  isAI: 1
+--- !u!114 &4388777900322376509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4604935930095892905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34aa7b37a3b1fad42a998e306d08614d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCarryCan: 0
+  isCarry: 0
+  offset: {x: -0.6, y: 0.5, z: 0}

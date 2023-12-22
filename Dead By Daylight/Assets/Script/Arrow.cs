@@ -42,6 +42,7 @@ public class Arrow : MonoBehaviour
 
         //arrowRect.transform.rotation = rotation;
         arrowTrans.Rotate(0, 0, -360 * Time.deltaTime * speed);
-            }
+
+    }
 }
 

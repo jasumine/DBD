@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -9,13 +10,14 @@ using UnityEngine.Playables;
 
 public class KillerController : MonoBehaviour
 {
+    [SerializeField] private Collider weaponCollider;
+    
     public float moveSpeed;
     public float specialAbilityCount = 0;
     private bool isKillMove = true;
     public bool isActive = false;
 
     public bool isAI = true;
-
 
     Rigidbody killRigid;
     Vector3 killPos;
@@ -33,6 +35,7 @@ public class KillerController : MonoBehaviour
             KillerMove();
             KillerAbillity();
         }
+
     }
 
     private void KillerMove()
@@ -49,7 +52,7 @@ public class KillerController : MonoBehaviour
     {
         if(!isActive && Input.GetMouseButtonDown(0))
         {
-            StartCoroutine("Attack");
+            StartCoroutine(Attack()) ;
         }
 
         if(!isActive && Input.GetMouseButton(1))
@@ -70,9 +73,12 @@ public class KillerController : MonoBehaviour
     {
         isActive = true;
         // animator 좌클릭 trigger;
-        Debug.Log("능력 실행");
-        
+        Debug.Log("좌클릭 타격 실행");
+
+        // 좌클릭을 눌렀을 때 Weapon collider가 active 되도록 하기
+        weaponCollider.enabled = true;
         yield return new WaitForSeconds(1f);
+        weaponCollider.enabled = false;
 
         isActive = false;
     }
@@ -86,4 +92,5 @@ public class KillerController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         isActive = false;
     }
+
 }
