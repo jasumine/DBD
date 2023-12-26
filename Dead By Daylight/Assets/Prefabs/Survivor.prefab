@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 8090404425717669136}
   - component: {fileID: 3331351100871414113}
   - component: {fileID: 5373359979639216369}
-  - component: {fileID: 5822231227673259029}
   - component: {fileID: 7493242927338791203}
+  - component: {fileID: 5822231227673259029}
   - component: {fileID: 5127874479315375135}
   m_Layer: 0
   m_Name: Survivor
@@ -112,29 +112,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5822231227673259029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2947981413219628177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47cca4df6441f3946a9921f19c3c17c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  health: 2
-  hookChance: 2
-  delayTime: 0
-  isSurvMove: 1
-  isCarried: 0
-  isAI: 0
-  isSuperMode: 0
-  havingItem: {fileID: 0}
-  itemPutOnPos: {fileID: 4336305926518180028}
-  hookGauge: {fileID: 5127874479315375135}
 --- !u!54 &7493242927338791203
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -162,6 +139,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &5822231227673259029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947981413219628177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47cca4df6441f3946a9921f19c3c17c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  health: 2
+  delayTime: 0
+  isSurvMove: 1
+  isCarried: 0
+  isAI: 0
+  isSuperMode: 0
+  havingItem: {fileID: 0}
+  itemPutOnPos: {fileID: 4336305926518180028}
+  hookGauge: {fileID: 5127874479315375135}
 --- !u!114 &5127874479315375135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +173,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00730c6bd09a104980de9cc22f33a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hookChance: 0
+  hookCount: 100
+  isHang: 0
+  escapeValue: 0
+  isTryEscape: 0
 --- !u!1 &6197518933771057944
 GameObject:
   m_ObjectHideFlags: 0

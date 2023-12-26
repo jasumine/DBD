@@ -1074,7 +1074,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
@@ -1258,7 +1258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6553339715810290120, guid: 40899a58a4d249e499b4f2e3edc81d70, type: 3}
       propertyPath: isAI
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6553339715810290120, guid: 40899a58a4d249e499b4f2e3edc81d70, type: 3}
       propertyPath: weaponCollider

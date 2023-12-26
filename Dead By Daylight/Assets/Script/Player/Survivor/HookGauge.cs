@@ -69,11 +69,12 @@ public class HookGauge : MonoBehaviour
         }
         else if(0 < hookCount && hookCount <=50)
         {
-
+            hookChance = 2;
         }
         else if(hookCount<= 0)
         {
-           // Á×À½
+            // Á×À½
+            hookChance = 3;
         }
     }
 
