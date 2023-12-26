@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HookGauge : MonoBehaviour
 {
+    public Hook myHook;
+
     public int hookChance = 0;
     public float hookCount = 100;
 
@@ -14,10 +16,12 @@ public class HookGauge : MonoBehaviour
 
     public bool isTryEscape = false;
 
+    private SurvivorController controller;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        controller = GetComponent<SurvivorController>();
     }
 
     // Update is called once per frame
@@ -27,7 +31,6 @@ public class HookGauge : MonoBehaviour
         {
             ReduceValue();
         }
-
     }
     
 
@@ -107,6 +110,7 @@ public class HookGauge : MonoBehaviour
         {
             Debug.Log("탈출에 성공 했습니다.");
             escapeValue = 0;
+            EscapeHook();
 
             yield return new WaitForSeconds(3f);
             isTryEscape = false;
@@ -121,5 +125,12 @@ public class HookGauge : MonoBehaviour
         }
     }
 
-
+    public void EscapeHook()
+    {
+        myHook.isHanging = false;
+        isHang = false;
+        myHook = null;
+        this.gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1.11f, gameObject.transform.position.z);
+        controller.health = 1;
+    }
 }

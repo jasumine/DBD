@@ -7,7 +7,7 @@ public class Hook : MonoBehaviour
 {
     private HookGauge survivor;
 
-    private bool isHanging = false;
+    public bool isHanging = false;
 
     void Start()
     {
@@ -32,6 +32,7 @@ public class Hook : MonoBehaviour
 
         // 갈고리에 걸렸다
         survivor.SetIsHang();
+        survivor.myHook = this;
     }
     
 

@@ -14,6 +14,7 @@ public class SurvivorController : MonoBehaviour
 {
     public float moveSpeed;
     public int health = 2;
+    public float healthValue = 0;
     public float delayTime;
 
     public bool isSurvMove = true;
@@ -49,6 +50,7 @@ public class SurvivorController : MonoBehaviour
         surRigid = GetComponent<Rigidbody>();
         playerState = PlayerStates.Idle;
         isFrontItem = false;
+        health = 2;
     }
 
     private void Update()
@@ -182,7 +184,7 @@ public class SurvivorController : MonoBehaviour
                 break;
             case 0:
                 moveSpeed = 2;
-               
+                TreatSelp();
                 break;
         }
     }
@@ -209,6 +211,18 @@ public class SurvivorController : MonoBehaviour
         return health;
     }
 
+    private void TreatSelp()
+    {
+        if(Input.GetMouseButton(0))
+        {
+            healthValue += 10 * Time.deltaTime;
+            if(healthValue>=95)
+            {
+                healthValue = 95;
+            }
+        }
+    }
+
     IEnumerator SuperMode()
     {
         isSuperMode = true;
@@ -224,7 +238,7 @@ public class SurvivorController : MonoBehaviour
         this.gameObject.layer = 6; // survivor layer
     }
 
-
+    // ===================Item==============================
 
     private void UsingItem()
     {
