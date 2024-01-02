@@ -43,6 +43,8 @@ public class SurvivorStat : MonoBehaviour
     public bool isInputD;
     
 
+    // 
+
 
 
 }

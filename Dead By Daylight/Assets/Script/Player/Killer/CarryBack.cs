@@ -19,12 +19,6 @@ public class CarryBack : MonoBehaviour
         checkBox = GetComponent<Collider>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         if (isCarryCan == true && Input.GetKeyDown(KeyCode.Space))
@@ -54,9 +48,11 @@ public class CarryBack : MonoBehaviour
         {
             survivorController = collision.gameObject.GetComponent<SurvivorController>();
 
+            SurvivorStat survStat = survivorController.gameObject.GetComponent<SurvivorStat>();
+
             survivor = survivorController.gameObject;
 
-            if (survivorController.GetHealth() == 0 && isCarry == false)
+            if (survStat.health == 0 && isCarry == false)
             {
                 isCarryCan = true;
             }
