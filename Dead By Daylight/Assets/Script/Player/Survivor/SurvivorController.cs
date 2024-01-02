@@ -12,10 +12,7 @@ public enum PlayerStates
 
 public class SurvivorController : MonoBehaviour
 {
-    public float moveSpeed;
-    public int health = 2;
-    public float healthValue = 0;
-    public float delayTime;
+    SurvivorStat surv_Stat;
 
     public bool isSurvMove = true;
     public bool isCarried = false;
@@ -47,10 +44,10 @@ public class SurvivorController : MonoBehaviour
 
     private void Start()
     {
+        surv_Stat = GetComponent<SurvivorStat>();
         surRigid = GetComponent<Rigidbody>();
         playerState = PlayerStates.Idle;
-        isFrontItem = false;
-        health = 2;
+        isFrontItem = false;    
     }
 
     private void Update()
@@ -96,18 +93,18 @@ public class SurvivorController : MonoBehaviour
             switch (playerState)
             {
                 case PlayerStates.Idle:
-                    surPos = new Vector3(x, 0f, z).normalized * moveSpeed * Time.deltaTime;
+                    surPos = new Vector3(x, 0f, z).normalized * surv_Stat.moveSpeed * Time.deltaTime;
                     surRigid.MovePosition(transform.position + surPos);
                     break;
                 case PlayerStates.Run:
-                    surPos = new Vector3(x, 0f, z).normalized * (moveSpeed * 2.5f) * Time.deltaTime;
+                    surPos = new Vector3(x, 0f, z).normalized * (surv_Stat.moveSpeed * 2.5f) * Time.deltaTime;
                     surRigid.MovePosition(transform.position + surPos);
                     break;
                 case PlayerStates.Sit:
                     Renderer render = GetComponent<Renderer>();
                     render.material.color = Color.yellow;
 
-                    surPos = new Vector3(x, 0f, z).normalized * (moveSpeed * 0.5f) * Time.deltaTime;
+                    surPos = new Vector3(x, 0f, z).normalized * (surv_Stat.moveSpeed * 0.5f) * Time.deltaTime;
                     surRigid.MovePosition(transform.position + surPos);
                     break;
 
@@ -175,7 +172,7 @@ public class SurvivorController : MonoBehaviour
 
     private void CheckHealth()
     {
-        switch(health)
+        switch(surv_Stat.health)
         {
             case 2:
                 break;
@@ -183,7 +180,7 @@ public class SurvivorController : MonoBehaviour
                 
                 break;
             case 0:
-                moveSpeed = 2;
+                surv_Stat.moveSpeed = 2;
                 TreatSelp();
                 break;
         }
@@ -191,34 +188,29 @@ public class SurvivorController : MonoBehaviour
 
     public void Sethealth()
     {
-        if(isSuperMode == false && health == 2)
+        if(isSuperMode == false && surv_Stat.health == 2)
         {
-            health--;
+           surv_Stat.health--;
             Debug.Log("살인마의 공격으로 다쳤습니다.");
-            Debug.Log(health);
+            Debug.Log(surv_Stat.health);
             StartCoroutine(SuperMode());
         }
-        if(isSuperMode == false && health == 1)
+        if(isSuperMode == false && surv_Stat.health == 1)
         {
-            health--;
+            surv_Stat.health--;
             Debug.Log("살인마의 공격으로 다쳤습니다.");
-            Debug.Log(health);
+            Debug.Log(surv_Stat.health);
         }
-    }
-
-    public int GetHealth()
-    {
-        return health;
     }
 
     private void TreatSelp()
     {
         if(Input.GetMouseButton(0))
         {
-            healthValue += 10 * Time.deltaTime;
-            if(healthValue>=95)
+            surv_Stat.currentHealth += surv_Stat.speedHealth * Time.deltaTime;
+            if(surv_Stat.currentHealth >= 95)
             {
-                healthValue = 95;
+                surv_Stat.currentHealth = 95;
             }
         }
     }
@@ -228,13 +220,13 @@ public class SurvivorController : MonoBehaviour
         isSuperMode = true;
         // 다른 오브젝트끼리는 부딪혀도, 생존자, 살인마, 살인마무기는 통과하도록 레이어 설정
         this.gameObject.layer = 8;
-        moveSpeed += 5;
-        Debug.Log(moveSpeed);
+        surv_Stat.moveSpeed += 5;
+        Debug.Log(surv_Stat.moveSpeed);
 
         yield return new WaitForSeconds(2f);
-        moveSpeed -= 5;
+        surv_Stat.moveSpeed -= 5;
         isSuperMode = false;
-        Debug.Log(moveSpeed);
+        Debug.Log(surv_Stat.moveSpeed);
         this.gameObject.layer = 6; // survivor layer
     }
 
@@ -319,8 +311,8 @@ public class SurvivorController : MonoBehaviour
 
         Destroy(havingItem);
 
-        delayTime = 1f;
-        yield return new WaitForSeconds(delayTime);
+        surv_Stat.delayTime = 1f;
+        yield return new WaitForSeconds(surv_Stat.delayTime);
         isSurvMove = true;
     }
 
@@ -342,8 +334,8 @@ public class SurvivorController : MonoBehaviour
 
         Debug.Log("아이템을 획득했다.");
 
-        delayTime = 1f;
-        yield return new WaitForSeconds(delayTime);
+        surv_Stat.delayTime = 1f;
+        yield return new WaitForSeconds(surv_Stat.delayTime);
         isSurvMove = true;
     }
 
@@ -373,8 +365,8 @@ public class SurvivorController : MonoBehaviour
         Debug.Log("아이템을 교체했다.");
 
 
-        delayTime = 1f;
-        yield return new WaitForSeconds(delayTime);
+        surv_Stat.delayTime = 1f;
+        yield return new WaitForSeconds(surv_Stat.delayTime);
         isSurvMove = true;
     }
 

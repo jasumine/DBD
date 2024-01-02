@@ -9,16 +9,6 @@ public class Hook : MonoBehaviour
 
     public bool isHanging = false;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-
-    }
-
     public bool GetIsHanging()
     {
         return isHanging;

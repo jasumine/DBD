@@ -5,24 +5,29 @@ using UnityEngine;
 
 public class HelpSurvivor : MonoBehaviour
 {
+    private SurvivorStat mySurvStat;
+
     [SerializeField] private GameObject friend;
-    private SurvivorController friend_Controller;
+    private SurvivorStat friend_Stat;
     private HookGauge friend_Hook;
     public bool ishelp;
 
-    public float saveValue;
+    private void Start()
+    {
+        mySurvStat = GetComponent<SurvivorStat>();
+    }
 
     private void OnCollisionStay(Collision collision)
     {
         if(collision.gameObject.tag == "Survivor")
         {
             friend = collision.gameObject;
-            friend_Controller = friend.GetComponent<SurvivorController>();
+            friend_Stat = friend.GetComponent<SurvivorStat>();
             friend_Hook = friend.GetComponent<HookGauge>();
 
-            if(friend_Hook.isHang == false)
+            if(friend_Stat.isHang == false)
             {
-                if (friend_Controller.health <= 1)
+                if (friend_Stat.health <= 1)
                 {
                     Treat();
                 }
@@ -37,7 +42,7 @@ public class HelpSurvivor : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         friend = null;
-        friend_Controller = null;
+        friend_Stat = null;
         friend_Hook = null;
     }
 
@@ -46,17 +51,17 @@ public class HelpSurvivor : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            friend_Controller.healthValue += 10 * Time.deltaTime;
-            if (friend_Controller.healthValue >= 100)
+            friend_Stat.currentHealth += friend_Stat.speedHealth * Time.deltaTime;
+            if (friend_Stat.currentHealth >= friend_Stat.maxHealth)
             {
-                friend_Controller.healthValue = 0;
-                friend_Controller.health++;
+                friend_Stat.currentHealth = 0;
+                friend_Stat.health++;
             }
         }
         if(Input.GetMouseButtonUp(0))
         {
             friend = null;
-            friend_Controller = null;
+            friend_Stat = null;
         }
     }
 
@@ -64,8 +69,8 @@ public class HelpSurvivor : MonoBehaviour
     {
         if(Input.GetMouseButton(0))
         {
-            saveValue += 2 * Time.deltaTime;
-            if(saveValue >=5)
+            mySurvStat.currentSave += mySurvStat.speedSave * Time.deltaTime;
+            if(mySurvStat.currentSave >= mySurvStat.maxSave)
             {
                 friend_Hook.EscapeHook();
                 friend_Hook = null;
@@ -73,7 +78,7 @@ public class HelpSurvivor : MonoBehaviour
         }
         if(Input.GetMouseButtonUp(0))
         {
-            saveValue = 0;
+            mySurvStat.currentSave = 0;
 
         }
     }

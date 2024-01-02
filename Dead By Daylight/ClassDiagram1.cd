@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Arrow" Collapsed="true">
+    <Position X="20.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAAAAACAAAAAAAAAAAAAIAAAAAQAAAAAAACCAAAA=</HashCode>
+      <FileName>Assets\Script\Arrow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraController">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAACAAAAAAAAAAAEAAAAAAAAAQAAAAgAAAAAA=</HashCode>
+      <FileName>Assets\Script\CameraController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Generator">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABUiACAAAGAACCQAAIAABAAAAAAAAAIBAEVAAAA=</HashCode>
+      <FileName>Assets\Script\Generator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hook">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAAAACAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAQ=</HashCode>
+      <FileName>Assets\Script\Hook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAABCAABAAAAAAAAAAAAAABAAAAQgAIAAQAAAA=</HashCode>
+      <FileName>Assets\Script\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemBox">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAQAACAAAEAAAAQAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Script\ItemBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CarryBack">
+    <Position X="9.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAQAAiAAAAAgAAAAAAACAAAAAQAlAAAAAAEAAAQ=</HashCode>
+      <FileName>Assets\Script\Player\Killer\CarryBack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KillerController">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAEiAAAQEgAABQABAhAIAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Player\Killer\KillerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weapon">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\Player\Killer\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelpSurvivor">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAADAAgAAAQAAAAAAAAgEAAgAAAgAAAA=</HashCode>
+      <FileName>Assets\Script\Player\Survivor\HelpSurvivor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HookGauge">
+    <Position X="5.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEACIAAAEAAAAAAAAUAAAggAAIUAAAAAAAAgg=</HashCode>
+      <FileName>Assets\Script\Player\Survivor\HookGauge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurvivorController">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYsACIMECADQRYBBCBAAAAgAAAAAABCUIIACCAABAg=</HashCode>
+      <FileName>Assets\Script\Player\Survivor\SurvivorController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillCheck" Collapsed="true">
+    <Position X="19" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAABAAAAAAAACAAAAAQAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\SkillCheck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SkillCircle" Collapsed="true">
+    <Position X="20.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAACCAAAAAAAAEAIAAICAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Script\SkillCircle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="totem">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAQAACAAAAAAAAAAAAAAAAIAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Script\totem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ItemType">
+    <Position X="5.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAACAAAAAIAAA=</HashCode>
+      <FileName>Assets\Script\Item.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PlayerStates">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Script\Player\Survivor\SurvivorController.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
