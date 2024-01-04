@@ -51,7 +51,7 @@ public class HelpSurvivor : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            friend_Stat.currentHealth += friend_Stat.speedHealth * Time.deltaTime;
+            friend_Stat.currentHealth += mySurvStat.speedFriendCare * Time.deltaTime;
             if (friend_Stat.currentHealth >= friend_Stat.maxHealth)
             {
                 friend_Stat.currentHealth = 0;

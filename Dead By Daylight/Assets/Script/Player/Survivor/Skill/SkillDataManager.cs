@@ -8,8 +8,21 @@ public class SkillData : MonoBehaviour
     public string name;
     public string description;
     public Image image;
-    public SkillEffect effect;
+    public int skillLevel;
+    public ISkillEffect effect;
+    public int LevelOneValue;
+    public int LevelTwoValue;
+    public int LevelThreeValue;
 
+    SkillData(string _name, string _description, int _LevelOneValue, int _LevelTwoValue, int _LevelThreeValue)
+    {
+        name = _name;
+        description = _description;
+        LevelOneValue = _LevelOneValue;
+        LevelTwoValue = _LevelTwoValue;
+        LevelThreeValue = _LevelThreeValue;
+
+    }
 
 
 
@@ -22,14 +35,9 @@ public class SkillData : MonoBehaviour
 
 public class SkillDataManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
+    SkillData data;
+    
+    void Data()
     {
         
     }

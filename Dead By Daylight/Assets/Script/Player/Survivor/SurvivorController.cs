@@ -207,10 +207,32 @@ public class SurvivorController : MonoBehaviour
     {
         if(Input.GetMouseButton(0))
         {
-            surv_Stat.currentHealth += surv_Stat.speedHealth * Time.deltaTime;
-            if(surv_Stat.currentHealth >= 95)
+            if(surv_Stat.health == 0)
             {
-                surv_Stat.currentHealth = 95;
+                surv_Stat.currentHealth += surv_Stat.speedVeryHurtCare * Time.deltaTime;
+                if(surv_Stat.isVeryHurtCareSelf == false)
+                {
+                    if (surv_Stat.currentHealth >= 95)
+                    {
+                        surv_Stat.currentHealth = 95;
+                    }
+                }
+               else
+                {
+                    if (surv_Stat.currentHealth >= surv_Stat.maxHealth)
+                    {
+                        surv_Stat.health++;
+                    }
+                }
+            }
+            
+            if(surv_Stat.health==1 && surv_Stat.isHurtCareSelf == true)
+            {
+                surv_Stat.currentHealth += surv_Stat.speedHurtCare * Time.deltaTime;
+                if (surv_Stat.currentHealth >= surv_Stat.maxHealth)
+                {
+                    surv_Stat.health++;
+                }
             }
         }
     }

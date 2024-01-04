@@ -8,14 +8,27 @@ public class SurvivorStat : MonoBehaviour
 
     public float delayTime = 0;
 
-    // 치료관련 
+    // ==============치료관련==========
     public int health = 2;
     public float currentHealth = 0;
     public float maxHealth = 100;
-    public float speedHealth = 10;
+
     public bool isSuperMode = false;
 
-    // 갈고리
+    // hurt
+    public bool isHurtCareSelf = false; // health 1->2
+    public float speedHurtCare = 20;
+
+    // very hurt
+    public bool isVeryHurtCareSelf = false; // health 0->1
+    public float speedVeryHurtCare= 10;
+
+    // for friend
+    public float speedFriendCare=20;
+
+
+    // =================갈고리===============
+
     public float hook = 0;
     public float currentSave = 0;
     public float maxSave = 5;
