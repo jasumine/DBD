@@ -9,6 +9,7 @@ public interface ISkillEffect
 }
 
 // =======여기 아래로 스킬을 추가한다========
+[System.Serializable]
 public class SelfCare: ISkillEffect
 {
     SurvivorStat stat;
@@ -37,12 +38,13 @@ public class SelfCare: ISkillEffect
     public void UnUse(GameObject obj, SkillData data)
     {
         stat = obj.GetComponent<SurvivorStat>();
-        stat.isVeryHurtCareSelf = false;
+        stat.isHurtCareSelf = false;
 
         stat.speedHurtCare = 20;
     }
 }
 
+[System.Serializable]
 public class UnBreakable : ISkillEffect
 {
     SurvivorStat stat;
@@ -77,13 +79,29 @@ public class UnBreakable : ISkillEffect
 
 public class SkillEffectManager : MonoBehaviour
 {
-    public enum effects{
-        SelfCare,
-        UnBreakable
+    public List<ISkillEffect> skillEffects;
+
+    public ISkillEffect GetEffect(int _idx)
+    {
+       return skillEffects[_idx];
     }
 
-    public void GetEffect(int name)
+    private void Start()
     {
-       
+        InitSkillEffect();
+    }
+
+    void InitSkillEffect()
+    {
+        skillEffects = new List<ISkillEffect>()
+        {
+            new SelfCare(),
+            new UnBreakable()
+        };
+    }
+
+    void AddSkillEffect()
+    {
+        skillEffects.Add(new SelfCare());
     }
 }

@@ -132,11 +132,12 @@ public class SurvivorController : MonoBehaviour
 
                 // 킬러에게서 떨어지도록 하기.
             }
-            
-
-
-
-
+        }
+    }
+    private void AiSurvivorMove()
+    {
+        if (isSurvMove == true)
+        {
 
         }
     }

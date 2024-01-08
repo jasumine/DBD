@@ -37,17 +37,14 @@ public class Item : MonoBehaviour
         switch(_type)
         {
             case ItemType.ToolBox:
-                Debug.Log("toolBox");
                 isUse = true;
                 break;
 
             case ItemType.MediKit:
-                Debug.Log("Medikit");
                 isUse = true;
                 break;
 
             case ItemType.Flash:
-                Debug.Log("Flash");
                 isUse = true;
                 break;
 

@@ -16,6 +16,10 @@ GameObject:
   - component: {fileID: 5822231227673259029}
   - component: {fileID: 5127874479315375135}
   - component: {fileID: 925702942972525963}
+  - component: {fileID: 9170070487177210364}
+  - component: {fileID: 4107911853427380359}
+  - component: {fileID: 4782289446465110836}
+  - component: {fileID: 1409794523902259871}
   m_Layer: 0
   m_Name: Survivor
   m_TagString: Untagged
@@ -152,10 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cca4df6441f3946a9921f19c3c17c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  health: 2
-  healthValue: 0
-  delayTime: 0
   isSurvMove: 1
   isCarried: 0
   isAI: 0
@@ -175,11 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a00730c6bd09a104980de9cc22f33a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hookChance: 0
-  hookCount: 100
-  isHang: 0
-  escapeValue: 0
-  isTryEscape: 0
+  myHook: {fileID: 0}
 --- !u!114 &925702942972525963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +190,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   friend: {fileID: 0}
   ishelp: 0
+--- !u!114 &9170070487177210364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947981413219628177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddcc7345bd1aaf0439dbf7e6ebd0f105, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  delayTime: 0
+  health: 2
+  currentHealth: 0
+  maxHealth: 100
+  isSuperMode: 0
+  isHurtCareSelf: 0
+  speedHurtCare: 20
+  isVeryHurtCareSelf: 0
+  speedVeryHurtCare: 10
+  speedFriendCare: 20
+  hook: 0
+  currentSave: 0
+  maxSave: 5
+  speedSave: 2
+  hookChance: 0
+  currentHookValue: 100
+  currentEscape: 0
+  maxEscape: 3
+  speedEscape: 10
+  isHang: 0
+  isTryEscape: 0
+  strugle: 0
+  currentStrugle: 0
+  maxStrugle: 100
+  speedStrugle: 0
+  isInputA: 0
+  isInputD: 0
+--- !u!114 &4107911853427380359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947981413219628177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54157d6851c5674c9ecab64e49656db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillDatas: []
+--- !u!114 &4782289446465110836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947981413219628177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e84c4164708ad524985ea40a9023c556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1409794523902259871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947981413219628177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e67b869a22323d47b25adde0c62a78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillList: []
 --- !u!1 &6197518933771057944
 GameObject:
   m_ObjectHideFlags: 0
