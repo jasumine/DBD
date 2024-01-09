@@ -221,7 +221,7 @@ public class Generator : MonoBehaviour
     }
 
 
-    private void CompleteGenerator()
+    public void CompleteGenerator()
     {
         isComplete = true;
         // 발전기 수리가 완성되면 해야 하는 작업

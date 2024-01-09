@@ -23,7 +23,6 @@ public class SurvivorController : MonoBehaviour
 
     private bool ishavingItem;
     private bool isFrontItem;
-    public bool isAI = false;
     public bool isSuperMode = false;
 
     float struggleValueMax = 100;
@@ -37,22 +36,20 @@ public class SurvivorController : MonoBehaviour
 
     public HookGauge hookGauge;
 
-    Rigidbody surRigid;
-    Vector3 surPos;
 
     PlayerStates playerState;
 
     private void Start()
     {
         surv_Stat = GetComponent<SurvivorStat>();
-        surRigid = GetComponent<Rigidbody>();
+        surv_Stat.surRigid = GetComponent<Rigidbody>();
         playerState = PlayerStates.Idle;
         isFrontItem = false;    
     }
 
     private void Update()
     {
-        if (isAI == false)
+        if (surv_Stat.isAI == false)
         {
             SurvivorMove();
             CheckState();
@@ -93,22 +90,23 @@ public class SurvivorController : MonoBehaviour
             switch (playerState)
             {
                 case PlayerStates.Idle:
-                    surPos = new Vector3(x, 0f, z).normalized * surv_Stat.moveSpeed * Time.deltaTime;
-                    surRigid.MovePosition(transform.position + surPos);
+                    surv_Stat.surPos = new Vector3(x, 0f, z).normalized * surv_Stat.moveSpeed * Time.deltaTime;
+                    surv_Stat.surRigid.MovePosition(transform.position + surv_Stat.surPos);
                     break;
                 case PlayerStates.Run:
-                    surPos = new Vector3(x, 0f, z).normalized * (surv_Stat.moveSpeed * 2.5f) * Time.deltaTime;
-                    surRigid.MovePosition(transform.position + surPos);
+                    Renderer render = GetComponent<Renderer>();
+                    render.material.color = Color.green;
+
+                    surv_Stat.surPos = new Vector3(x, 0f, z).normalized * (surv_Stat.moveSpeed * 2.5f) * Time.deltaTime;
+                    surv_Stat.surRigid.MovePosition(transform.position + surv_Stat.surPos);
                     break;
                 case PlayerStates.Sit:
-                    Renderer render = GetComponent<Renderer>();
+                    render = GetComponent<Renderer>();
                     render.material.color = Color.yellow;
 
-                    surPos = new Vector3(x, 0f, z).normalized * (surv_Stat.moveSpeed * 0.5f) * Time.deltaTime;
-                    surRigid.MovePosition(transform.position + surPos);
+                    surv_Stat.surPos = new Vector3(x, 0f, z).normalized * (surv_Stat.moveSpeed * 0.5f) * Time.deltaTime;
+                    surv_Stat.surRigid.MovePosition(transform.position + surv_Stat.surPos);
                     break;
-
-
             }
         }
 
@@ -132,13 +130,6 @@ public class SurvivorController : MonoBehaviour
 
                 // 킬러에게서 떨어지도록 하기.
             }
-        }
-    }
-    private void AiSurvivorMove()
-    {
-        if (isSurvMove == true)
-        {
-
         }
     }
 
@@ -291,6 +282,8 @@ public class SurvivorController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(this.transform.position + new Vector3(0, 0, 0.5f), 0.8f);
 
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireCube(new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z+0.5f), this.transform.localScale);
     }
 
 

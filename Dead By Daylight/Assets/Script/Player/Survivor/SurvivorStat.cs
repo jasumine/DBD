@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class SurvivorStat : MonoBehaviour
 {
-    public float moveSpeed = 10;
+    public bool isAI = false;
 
+    public Vector3 surPos;
+    public Rigidbody surRigid;
+    public float moveSpeed = 10;
     public float delayTime = 0;
 
     // ==============치료관련==========
@@ -54,10 +57,9 @@ public class SurvivorStat : MonoBehaviour
     public float speedStrugle = 0;
     public bool isInputA;
     public bool isInputD;
-    
+
 
     // 
-
 
 
 }

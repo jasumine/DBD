@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 4107911853427380359}
   - component: {fileID: 4782289446465110836}
   - component: {fileID: 1409794523902259871}
+  - component: {fileID: 3768645811738381156}
   m_Layer: 0
   m_Name: Survivor
   m_TagString: Untagged
@@ -158,7 +159,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSurvMove: 1
   isCarried: 0
-  isAI: 0
   isSuperMode: 0
   havingItem: {fileID: 0}
   itemPutOnPos: {fileID: 4336305926518180028}
@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddcc7345bd1aaf0439dbf7e6ebd0f105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isAI: 0
   moveSpeed: 10
   delayTime: 0
   health: 2
@@ -268,6 +269,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillList: []
+  equipList: []
+--- !u!114 &3768645811738381156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2947981413219628177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16a4207ec96ef5d46932206de59914bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6197518933771057944
 GameObject:
   m_ObjectHideFlags: 0

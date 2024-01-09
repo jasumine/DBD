@@ -9,6 +9,7 @@ TagManager:
   - Item
   - Arrow
   - Hook
+  - Generator
   layers:
   - Default
   - TransparentFX
