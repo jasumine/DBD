@@ -36,7 +36,7 @@ public class SurvivorController : MonoBehaviour
 
     public HookGauge hookGauge;
 
-
+    Vector3 surPos;
     PlayerStates playerState;
 
     private void Start()
@@ -90,22 +90,28 @@ public class SurvivorController : MonoBehaviour
             switch (playerState)
             {
                 case PlayerStates.Idle:
-                    surv_Stat.surPos = new Vector3(x, 0f, z).normalized * surv_Stat.moveSpeed * Time.deltaTime;
-                    surv_Stat.surRigid.MovePosition(transform.position + surv_Stat.surPos);
+                    surPos = new Vector3(x, 0f, z).normalized * surv_Stat.moveSpeed * Time.deltaTime;
+                    surv_Stat.surRigid.MovePosition(transform.position + surPos);
+
+                    //Debug.Log(this.gameObject + "survivor Idle");
+
                     break;
                 case PlayerStates.Run:
                     Renderer render = GetComponent<Renderer>();
                     render.material.color = Color.green;
 
-                    surv_Stat.surPos = new Vector3(x, 0f, z).normalized * (surv_Stat.moveSpeed * 2.5f) * Time.deltaTime;
-                    surv_Stat.surRigid.MovePosition(transform.position + surv_Stat.surPos);
+                    surPos = new Vector3(x, 0f, z).normalized * (surv_Stat.moveSpeed * 2.5f) * Time.deltaTime;
+                    surv_Stat.surRigid.MovePosition(transform.position + surPos);
+
+                   // Debug.Log(this.gameObject + "survivor Run");
+
                     break;
                 case PlayerStates.Sit:
                     render = GetComponent<Renderer>();
                     render.material.color = Color.yellow;
 
-                    surv_Stat.surPos = new Vector3(x, 0f, z).normalized * (surv_Stat.moveSpeed * 0.5f) * Time.deltaTime;
-                    surv_Stat.surRigid.MovePosition(transform.position + surv_Stat.surPos);
+                    surPos = new Vector3(x, 0f, z).normalized * (surv_Stat.moveSpeed * 0.5f) * Time.deltaTime;
+                    surv_Stat.surRigid.MovePosition(transform.position + surPos);
                     break;
             }
         }

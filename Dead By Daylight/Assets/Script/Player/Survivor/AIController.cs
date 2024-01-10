@@ -31,6 +31,8 @@ public class AIController : MonoBehaviour
 
     private SurvivorStat friendStat;
 
+    Vector3 aiPos;
+
     private void Start()
     {
         surv_Stat = GetComponent<SurvivorStat>();
@@ -71,6 +73,10 @@ public class AIController : MonoBehaviour
                 AIFindFriend();
                 break;
 
+            case AIStates.CareSurvivor:
+                AICareSurvivor();
+                break;
+
             case AIStates.RunToTarget:
                 AIGoToTarget(1f);
                 break;
@@ -98,8 +104,10 @@ public class AIController : MonoBehaviour
                     aiState = AIStates.FindGenerator;
                     break;
                 case 1:
-                    if(target ==null || target.tag !="Survivor")
+                    if (target == null || target.tag != "Survivor")
                         aiState = AIStates.FindSurvivor;
+                    else
+                        aiState = AIStates.RunToTarget;
                     break;
                 case 0:
                     // hp가 0이면, 
@@ -261,7 +269,7 @@ public class AIController : MonoBehaviour
    
     private void AIFindFriend()
     {
-        Collider[] colliders = Physics.OverlapSphere(this.transform.position, 40f);
+        Collider[] colliders = Physics.OverlapSphere(this.transform.position, 100f);
 
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -281,7 +289,11 @@ public class AIController : MonoBehaviour
         surv_Stat.surPos = transform.position;
         surv_Stat.surPos = Vector3.MoveTowards(surv_Stat.surPos, target.transform.position, (surv_Stat.moveSpeed * _speed) * Time.deltaTime);
         transform.position = surv_Stat.surPos;
-       
+
+        CheckAiObject();
+        // 네비게이션 -> 최소범위 넣어주기
+        // 최소범위를 정해서 근처에 있으면 실행되도록하기.
+
     }
 
 
@@ -296,7 +308,9 @@ public class AIController : MonoBehaviour
     private void CheckAiObject()
     {
         // 오버랩으로, 내 앞에 있는 obejct에 따라 행동을 바꾼다.
-        Collider[] colliders = Physics.OverlapBox(new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 0.5f), this.transform.localScale, Quaternion.identity);
+        //Collider[] colliders = Physics.OverlapBox(new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 0.5f), this.transform.localScale, Quaternion.identity);
+
+        Collider[] colliders = Physics.OverlapSphere(this.transform.position, 3f);
 
         for (int i = 0; i < colliders.Length; i++)
         {
@@ -307,48 +321,62 @@ public class AIController : MonoBehaviour
                 AIRepairGenerator(colliders[i].gameObject);
                 break;
             }
+            // 앞에 다친 생존자가 있다면 치료를 해준다.
             else if (colliders[i].tag == "Survivor")
             {
                 if (colliders[i].gameObject == this.gameObject)
                     continue;
 
                 friendStat = colliders[i].GetComponent<SurvivorStat>();
-                if(friendStat.health<=1)
+                if (friendStat.health <= 1)
                 {
                     aiState = AIStates.CareSurvivor;
                 }
+                else
+                    continue;
             }
         }
     }
 
     private void AIRepairGenerator(GameObject _object)
     {
-        Renderer render = GetComponent<Renderer>();
-        render.material.color = Color.gray;
-        Generator generator = _object.GetComponent<Generator>();
-
-        generator.repairValue += 0.5f * Time.deltaTime;
-        if (generator.repairValue >= 100)
+        if(aiState== AIStates.RepairGenerator)
         {
-            generator.CompleteGenerator();
-            aiState = AIStates.FindGenerator;
+            Renderer render = GetComponent<Renderer>();
+            render.material.color = Color.gray;
+            Generator generator = _object.GetComponent<Generator>();
+
+            generator.repairValue += 0.5f * Time.deltaTime;
+            if (generator.repairValue >= 100)
+            {
+                generator.CompleteGenerator();
+                aiState = AIStates.FindGenerator;
+            }
         }
     }
 
-    private void AICareSurvivor(GameObject _object)
+    private void AICareSurvivor()
     {
         Renderer render = GetComponent<Renderer>();
         render.material.color = Color.gray;
-        // helpSurvivor 스크립트 가져오기
+        // friendStat에 접근해서 치료하기.
+        friendStat.currentHealth += surv_Stat.speedFriendCare * Time.deltaTime;
+        if (friendStat.currentHealth >= friendStat.maxHealth)
+        {
+            friendStat.currentHealth = 0;
+            friendStat.health++;
+            friendStat = null;
+        }
+
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(this.transform.position, 40f);
+        Gizmos.DrawWireSphere(this.transform.position, 100f);
 
         Gizmos.color = Color.green;
-        Gizmos.DrawWireCube(new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + 0.5f), this.transform.localScale);
+        Gizmos.DrawWireSphere(this.transform.position, 1f);
 
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(this.transform.position, killerRangeIn);

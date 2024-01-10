@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CameraController : MonoBehaviour
 {
@@ -13,10 +14,14 @@ public class CameraController : MonoBehaviour
     float mouseX = 0;
     float mouseY = 0;
 
+    public Transform playerPos;
+    public Vector3 cameraPos;
+
 
     private void Start()
     {
         survCamera = Camera.main;
+        playerPos = transform.parent;
     }
 
     private void Update()
@@ -27,5 +32,6 @@ public class CameraController : MonoBehaviour
         mouseY = Mathf.Clamp(mouseY, minYRotation, maxYRotation);
         transform.eulerAngles = new Vector3(-mouseY, mouseX, 0);
 
+        transform.position = (playerPos.position + cameraPos);
     }
 }

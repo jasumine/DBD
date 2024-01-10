@@ -227,6 +227,8 @@ MonoBehaviour:
   cameraSpeed: 1
   minYRotation: -25
   maxYRotation: 25
+  playerPos: {fileID: 0}
+  cameraPos: {x: 0, y: 0.305, z: -0.271}
 --- !u!1 &4604935930095892905
 GameObject:
   m_ObjectHideFlags: 0

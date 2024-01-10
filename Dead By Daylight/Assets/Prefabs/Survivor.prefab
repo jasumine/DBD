@@ -203,6 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAI: 0
+  surPos: {x: 0, y: 0, z: 0}
+  surRigid: {fileID: 0}
   moveSpeed: 10
   delayTime: 0
   health: 2
@@ -282,6 +284,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16a4207ec96ef5d46932206de59914bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aiState: 0
+  surv_Stat: {fileID: 0}
+  killerRangeIn: 24
+  killerRangeOut: 16
+  killerRangeStep: 0
+  target: {fileID: 0}
 --- !u!1 &6197518933771057944
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,3 +430,5 @@ MonoBehaviour:
   cameraSpeed: 1
   minYRotation: -25
   maxYRotation: 25
+  playerPos: {fileID: 6671466322882608733}
+  cameraPos: {x: 0, y: 1.31, z: -3.11}
