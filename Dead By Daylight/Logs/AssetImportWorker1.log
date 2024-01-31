@@ -15,7 +15,7 @@ C:/Users/Administrator/Desktop/DBD/Dead By Daylight
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-54443
+53527
 Successfully changed project path to: C:/Users/Administrator/Desktop/DBD/Dead By Daylight
 C:/Users/Administrator/Desktop/DBD/Dead By Daylight
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/Administrator/Desktop/DBD/Dead By Daylight
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [14808] Host "[IP] 192.168.1.103 [Port] 0 [Flags] 2 [Guid] 521024337 [EditorId] 521024337 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-DEG4QGE) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [21096] Host "[IP] 192.168.1.103 [Port] 0 [Flags] 2 [Guid] 2485498871 [EditorId] 2485498871 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-DEG4QGE) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [14808] Host "[IP] 192.168.1.103 [Port] 0 [Flags] 2 [Guid] 521024337 [EditorId] 521024337 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-DEG4QGE) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [21096] Host "[IP] 192.168.1.103 [Port] 0 [Flags] 2 [Guid] 2485498871 [EditorId] 2485498871 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-DEG4QGE) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
-Refreshing native plugins compatible for Editor in 7.66 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 6.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.12f1 (4fe6e059c7ef)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/Resources/UnitySubsystems
@@ -70,49 +70,49 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56076
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56820
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.009741 seconds.
-- Loaded All Assemblies, in  0.402 seconds
+Registered in 0.008053 seconds.
+- Loaded All Assemblies, in  0.338 seconds
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 498 ms
+Android Extension - Scanning For ADB Devices 414 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.831 seconds
-Domain Reload Profiling: 1232ms
-	BeginReloadAssembly (121ms)
+- Finished resetting the current domain, in  0.721 seconds
+Domain Reload Profiling: 1058ms
+	BeginReloadAssembly (102ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (37ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (167ms)
-		LoadAssemblies (120ms)
+	RebuildCommonClasses (31ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (138ms)
+		LoadAssemblies (100ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (164ms)
-			TypeCache.Refresh (163ms)
-				TypeCache.ScanAssembly (149ms)
+		AnalyzeDomain (136ms)
+			TypeCache.Refresh (134ms)
+				TypeCache.ScanAssembly (121ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (831ms)
+	FinalizeReload (721ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (773ms)
+		SetupLoadedEditorAssemblies (667ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (614ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (518ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (106ms)
-			ProcessInitializeOnLoadMethodAttributes (46ms)
+			ProcessInitializeOnLoadAttributes (92ms)
+			ProcessInitializeOnLoadMethodAttributes (51ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -120,8 +120,8 @@ Domain Reload Profiling: 1232ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.676 seconds
-Refreshing native plugins compatible for Editor in 2.74 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.675 seconds
+Refreshing native plugins compatible for Editor in 2.53 ms, found 3 plugins.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
@@ -130,47 +130,47 @@ Package Manager log level set to [2]
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.575 seconds
-Domain Reload Profiling: 1248ms
-	BeginReloadAssembly (152ms)
+- Finished resetting the current domain, in  0.589 seconds
+Domain Reload Profiling: 1264ms
+	BeginReloadAssembly (164ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (24ms)
-	RebuildCommonClasses (36ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (48ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (41ms)
 	LoadAllAssembliesAndSetupDomain (425ms)
-		LoadAssemblies (315ms)
+		LoadAssemblies (298ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (202ms)
-			TypeCache.Refresh (177ms)
-				TypeCache.ScanAssembly (157ms)
-			ScanForSourceGeneratedMonoScriptInfo (18ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (575ms)
+		AnalyzeDomain (222ms)
+			TypeCache.Refresh (196ms)
+				TypeCache.ScanAssembly (173ms)
+			ScanForSourceGeneratedMonoScriptInfo (17ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (590ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (422ms)
+		SetupLoadedEditorAssemblies (408ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (31ms)
-			SetLoadedEditorAssemblies (4ms)
+			InitializePlatformSupportModulesInManaged (28ms)
+			SetLoadedEditorAssemblies (3ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (69ms)
-			ProcessInitializeOnLoadAttributes (291ms)
-			ProcessInitializeOnLoadMethodAttributes (20ms)
-			AfterProcessingInitializeOnLoad (6ms)
+			BeforeProcessingInitializeOnLoad (58ms)
+			ProcessInitializeOnLoadAttributes (295ms)
+			ProcessInitializeOnLoadMethodAttributes (18ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 3.26 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 2.28 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3121 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (56.9 KB). Loaded Objects now: 3586.
-Memory consumption went from 128.1 MB to 128.1 MB.
-Total: 5.375400 ms (FindLiveObjects: 0.642200 ms CreateObjectMapping: 0.685400 ms MarkObjects: 3.854100 ms  DeleteObjects: 0.189500 ms)
+Unloading 32 unused Assets / (56.8 KB). Loaded Objects now: 3586.
+Memory consumption went from 128.2 MB to 128.1 MB.
+Total: 3.658900 ms (FindLiveObjects: 0.265400 ms CreateObjectMapping: 0.241600 ms MarkObjects: 3.023000 ms  DeleteObjects: 0.126300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -187,100 +187,92 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 6521.086469 seconds.
-  path: Assets/Old Sea Port/prefabs/building_segment_6.prefab
-  artifactKey: Guid(7d609f7b85b8b834c967c9708aa167ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/building_segment_6.prefab using Guid(7d609f7b85b8b834c967c9708aa167ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7d9a3fab939f2741ee3283f5340fb5f') in 0.403873 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 13
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Old Sea Port/prefabs/building_segment_1.prefab
-  artifactKey: Guid(287711fb95cdc004b814e53a055b4b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/building_segment_1.prefab using Guid(287711fb95cdc004b814e53a055b4b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d3059fbefed7c28432f7a3f191a0bb3') in 0.034276 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 13
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
+  Time since last request: 8022.758465 seconds.
   path: Assets/Old Sea Port/prefabs/crate_2.prefab
   artifactKey: Guid(9f35541b213a65340a8e088b7f3ab551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/crate_2.prefab using Guid(9f35541b213a65340a8e088b7f3ab551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1addcc3f868166e149ea7899e1d889a6') in 0.029237 seconds
+Start importing Assets/Old Sea Port/prefabs/crate_2.prefab using Guid(9f35541b213a65340a8e088b7f3ab551) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1addcc3f868166e149ea7899e1d889a6') in 0.120690 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 12
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
+  Time since last request: 0.000029 seconds.
   path: Assets/Old Sea Port/prefabs/crate_1.prefab
   artifactKey: Guid(55fecf1063fe8474493f4866aaadffbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/crate_1.prefab using Guid(55fecf1063fe8474493f4866aaadffbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '015dcb0add6f92a120950e3c7ed2e1e5') in 0.028086 seconds
+Start importing Assets/Old Sea Port/prefabs/crate_1.prefab using Guid(55fecf1063fe8474493f4866aaadffbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '015dcb0add6f92a120950e3c7ed2e1e5') in 0.027906 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 12
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Old Sea Port/prefabs/barrel.prefab
-  artifactKey: Guid(e5da93bf3ff477c4f8f88f51e419c805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/barrel.prefab using Guid(e5da93bf3ff477c4f8f88f51e419c805) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e48ae069dbed2be33915073eef86f96') in 0.022545 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Old Sea Port/prefabs/boat_2.prefab
-  artifactKey: Guid(827102f6dfdb671428e2504c7680aeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/boat_2.prefab using Guid(827102f6dfdb671428e2504c7680aeea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd07a8cb16bf7bfb5ccc3828b1341ca7b') in 0.510017 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 42
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Old Sea Port/prefabs/boat_1.prefab
-  artifactKey: Guid(0297c1d9dc5137043b0bde39f96ff5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/boat_1.prefab using Guid(0297c1d9dc5137043b0bde39f96ff5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f51f002b2adfc3764241081852ee4afb') in 0.024641 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.698673 seconds.
-  path: Assets/Old Sea Port/prefabs/fireplace.prefab
-  artifactKey: Guid(1bf9bc82a9760b2488a711e79d36551e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/fireplace.prefab using Guid(1bf9bc82a9760b2488a711e79d36551e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6d4783ba95f4f273f2693c7259726eb') in 0.021138 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 12
-========================================================================
-Received Import Request.
-  Time since last request: 0.387079 seconds.
-  path: Assets/Old Sea Port/prefabs/Log_1.prefab
-  artifactKey: Guid(d76a78a721a5d9d499abc8aec19fdc8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/Log_1.prefab using Guid(d76a78a721a5d9d499abc8aec19fdc8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9f9b190008e18fd67b9fe6c44ddfbde') in 0.033460 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 17
-========================================================================
-Received Import Request.
-  Time since last request: 0.354716 seconds.
-  path: Assets/Old Sea Port/prefabs/Old Sea Port_Tree.prefab
-  artifactKey: Guid(060de24b039008143aa190133e1fb8e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/Old Sea Port_Tree.prefab using Guid(060de24b039008143aa190133e1fb8e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3dd1eca421b5d5287965684b03ffa95') in 0.018009 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 11
-========================================================================
-Received Import Request.
-  Time since last request: 0.022714 seconds.
-  path: Assets/Old Sea Port/prefabs/Rain.prefab
-  artifactKey: Guid(fed5f9582b6829c43a0d1459a97de74d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/Rain.prefab using Guid(fed5f9582b6829c43a0d1459a97de74d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '028c86de81ae8b53b4e8b77297e6b90b') in 0.047335 seconds
+  Time since last request: 0.000019 seconds.
+  path: Assets/Old Sea Port/prefabs/fence_segment_2.prefab
+  artifactKey: Guid(b2d53ad90721dcf489a412c5f39415eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Old Sea Port/prefabs/fence_segment_2.prefab using Guid(b2d53ad90721dcf489a412c5f39415eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf90644505be41992a55173ca8f0876f') in 0.254492 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 10
 ========================================================================
 Received Import Request.
-  Time since last request: 0.317245 seconds.
-  path: Assets/Old Sea Port/prefabs/tower_extension.prefab
-  artifactKey: Guid(6ced61b88da889a4db169a27d5f9f634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Old Sea Port/prefabs/tower_extension.prefab using Guid(6ced61b88da889a4db169a27d5f9f634) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65a1250237b142a23bded71224968726') in 0.036952 seconds
+  Time since last request: 0.000024 seconds.
+  path: Assets/Old Sea Port/prefabs/fireplace.prefab
+  artifactKey: Guid(1bf9bc82a9760b2488a711e79d36551e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Old Sea Port/prefabs/fireplace.prefab using Guid(1bf9bc82a9760b2488a711e79d36551e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6d4783ba95f4f273f2693c7259726eb') in 0.032978 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Old Sea Port/prefabs/fence_gate.prefab
+  artifactKey: Guid(5cd829d670d42cf458be57a99ad05bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Old Sea Port/prefabs/fence_gate.prefab using Guid(5cd829d670d42cf458be57a99ad05bf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9de0842de9d7e85ac5550513a79dcfc7') in 0.014238 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Old Sea Port/prefabs/dock_2.prefab
+  artifactKey: Guid(60a7c2536ae44384a9181dd65cb6d107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Old Sea Port/prefabs/dock_2.prefab using Guid(60a7c2536ae44384a9181dd65cb6d107) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdc1a7e12ffdd106562fea97c1573328') in 0.135039 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 30
+========================================================================
+Received Import Request.
+  Time since last request: 3.162996 seconds.
+  path: Assets/Old Sea Port/prefabs/chair.prefab
+  artifactKey: Guid(d08aa3fda32682b48b8dd7795337395a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Old Sea Port/prefabs/chair.prefab using Guid(d08aa3fda32682b48b8dd7795337395a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c280644c2aab42e9fa00fa6fc6c05bbd') in 0.025926 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 5.187130 seconds.
+  path: Assets/Old Sea Port/prefabs/building_segment_4.prefab
+  artifactKey: Guid(94de232499f0e2344a01df0f4013ddd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Old Sea Port/prefabs/building_segment_4.prefab using Guid(94de232499f0e2344a01df0f4013ddd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60951d7ee86220608e0e646048197fb5') in 0.030088 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.011813 seconds.
+  path: Assets/Old Sea Port/prefabs/building_segment_1.prefab
+  artifactKey: Guid(287711fb95cdc004b814e53a055b4b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Old Sea Port/prefabs/building_segment_1.prefab using Guid(287711fb95cdc004b814e53a055b4b1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d3059fbefed7c28432f7a3f191a0bb3') in 0.029462 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 11.924825 seconds.
+  path: Assets/Old Sea Port/prefabs/brick_column_1.prefab
+  artifactKey: Guid(4154bf6e40fe42543a525d9b4fbc965f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Old Sea Port/prefabs/brick_column_1.prefab using Guid(4154bf6e40fe42543a525d9b4fbc965f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37ce2e3553a4fe4938629e62f153bf5d') in 0.026724 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 0.026447 seconds.
+  path: Assets/Old Sea Port/prefabs/boat_1.prefab
+  artifactKey: Guid(0297c1d9dc5137043b0bde39f96ff5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Old Sea Port/prefabs/boat_1.prefab using Guid(0297c1d9dc5137043b0bde39f96ff5b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f51f002b2adfc3764241081852ee4afb') in 0.024828 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 TcpMessagingSession - receive error: operation aborted. errorcode: 995, details: 스레드 종료 또는 응용 프로그램 요청 때문에 I/O 작업이 취소되었습니다.
 AssetImportWorker is now disconnected from the server
