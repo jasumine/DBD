@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 4916891462360997009}
   - component: {fileID: 6553339715810290120}
   - component: {fileID: 4388777900322376509}
+  - component: {fileID: 4104759539781975514}
   m_Layer: 0
   m_Name: Killer
   m_TagString: Untagged
@@ -381,10 +382,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponCollider: {fileID: 0}
-  moveSpeed: 15
-  specialAbilityCount: 0
-  isActive: 0
-  isAI: 1
 --- !u!114 &4388777900322376509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,6 +394,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34aa7b37a3b1fad42a998e306d08614d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4104759539781975514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4604935930095892905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d60d5db633bf3d488ad51e412d3cb97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAI: 0
+  isActive: 0
+  moveSpeed: 15
+  specialAbilityCount: 0
   isCarryCan: 0
   isCarry: 0
   offset: {x: -0.6, y: 0.5, z: 0}

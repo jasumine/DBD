@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -87,10 +88,14 @@ public class SurvivorController : MonoBehaviour
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 
+            Vector3 moveHorizontal = transform.right * x;
+            Vector3 moveVertical = transform.forward * z;
+
+
             switch (playerState)
             {
                 case PlayerStates.Idle:
-                    surPos = new Vector3(x, 0f, z).normalized * surv_Stat.moveSpeed * Time.deltaTime;
+                    surPos = (moveHorizontal +  moveVertical).normalized * surv_Stat.moveSpeed * Time.deltaTime;
                     surv_Stat.surRigid.MovePosition(transform.position + surPos);
 
                     //Debug.Log(this.gameObject + "survivor Idle");
@@ -100,7 +105,7 @@ public class SurvivorController : MonoBehaviour
                     Renderer render = GetComponent<Renderer>();
                     render.material.color = Color.green;
 
-                    surPos = new Vector3(x, 0f, z).normalized * (surv_Stat.moveSpeed * 2.5f) * Time.deltaTime;
+                    surPos = (moveHorizontal + moveVertical).normalized * (surv_Stat.moveSpeed * 2.5f) * Time.deltaTime;
                     surv_Stat.surRigid.MovePosition(transform.position + surPos);
 
                    // Debug.Log(this.gameObject + "survivor Run");

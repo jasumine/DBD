@@ -29,9 +29,13 @@ public class CameraController : MonoBehaviour
         mouseX += Input.GetAxis("Mouse X") * cameraSpeed;
         mouseY += Input.GetAxis("Mouse Y") * cameraSpeed;
 
+        // 마우스 회전에따라 player도 회전하도록 한다.
         mouseY = Mathf.Clamp(mouseY, minYRotation, maxYRotation);
         transform.eulerAngles = new Vector3(-mouseY, mouseX, 0);
+        playerPos.eulerAngles = new Vector3(-mouseY, mouseX, 0);
+
 
         transform.position = (playerPos.position + cameraPos);
+
     }
 }
