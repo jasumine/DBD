@@ -8,6 +8,11 @@ public class ItemBox : MonoBehaviour
 
     public bool isComplete = false;
 
+    public GameObject boxTop;
+    public GameObject boxBottom;
+    public List<GameObject> items;
+
+
     void Start()
     {
         openValue = 0;
@@ -21,11 +26,11 @@ public class ItemBox : MonoBehaviour
 
 
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
         if (isComplete == false)
         {
-            if (collision.gameObject.tag == "Survivor")
+            if (other.gameObject.tag == "Survivor")
             {
                 // 생존자인 경우 상자 오픈
                 if (Input.GetMouseButton(0))
@@ -45,12 +50,23 @@ public class ItemBox : MonoBehaviour
 
             }
         }
+
     }
+  
 
     private void GetItem()
     {
-        // 아이템이 랜덤으로 생성되어야함.
-        // 아이템 데이터베이스를 만들어서 하기
+        // 랜덤으로 아이템을 생성한다.
+        int itemNum = Random.Range(0, items.Count);
+        GameObject itemObject = Instantiate(items[itemNum], this.transform);
+        itemObject.transform.position = new Vector3(itemObject.transform.position.x, itemObject.transform.position.y + 0.5f, itemObject.transform.position.z);
+
+        // 박스 뚜껑이 사라지면서 아이템이 보이게해준다.
+        boxTop.SetActive(false);
+        boxBottom.SetActive(false);
+
+
+
         Debug.Log("아이템을 획득했습니다!");
     }
 }
