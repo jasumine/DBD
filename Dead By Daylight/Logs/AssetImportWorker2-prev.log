@@ -1,0 +1,505 @@
+Using pre-set license
+Built from '2022.3/release' branch; Version is '2022.3.12f1 (4fe6e059c7ef) revision 5236448'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19045) 64bit Professional' Language: 'ko' Physical Memory: 16313 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2022.3.12f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+D:/Project/2023-2/DBD/Dead By Daylight
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+50472
+Successfully changed project path to: D:/Project/2023-2/DBD/Dead By Daylight
+D:/Project/2023-2/DBD/Dead By Daylight
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [1148] Host "[IP] 192.168.0.5 [Port] 0 [Flags] 2 [Guid] 1543187829 [EditorId] 1543187829 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-IA2CRES) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [1148] Host "[IP] 192.168.0.5 [Port] 0 [Flags] 2 [Guid] 1543187829 [EditorId] 1543187829 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-IA2CRES) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 11 workers.
+Refreshing native plugins compatible for Editor in 71.90 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.12f1 (4fe6e059c7ef)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Project/2023-2/DBD/Dead By Daylight/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Vendor:   NVIDIA
+    VRAM:     12129 MB
+    Driver:   31.0.15.4633
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56588
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.022799 seconds.
+- Loaded All Assemblies, in  0.410 seconds
+Native extension for WindowsStandalone target not found
+Failed to load: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/iOSSupport\x64\UnityEditor.iOS.Native.dll
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 517 ms
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.864 seconds
+Domain Reload Profiling: 1270ms
+	BeginReloadAssembly (126ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (81ms)
+	LoadAllAssembliesAndSetupDomain (152ms)
+		LoadAssemblies (123ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (149ms)
+			TypeCache.Refresh (147ms)
+				TypeCache.ScanAssembly (134ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (865ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (804ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (643ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (95ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.752 seconds
+Refreshing native plugins compatible for Editor in 3.92 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Failed to load: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/iOSSupport\x64\UnityEditor.iOS.Native.dll
+Native extension for iOS target not found
+Native extension for Android target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.763 seconds
+Domain Reload Profiling: 1511ms
+	BeginReloadAssembly (168ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (22ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (11ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (477ms)
+		LoadAssemblies (377ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (204ms)
+			TypeCache.Refresh (176ms)
+				TypeCache.ScanAssembly (157ms)
+			ScanForSourceGeneratedMonoScriptInfo (14ms)
+			ResolveRequiredComponents (5ms)
+	FinalizeReload (763ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (569ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (56ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (120ms)
+			ProcessInitializeOnLoadAttributes (351ms)
+			ProcessInitializeOnLoadMethodAttributes (19ms)
+			AfterProcessingInitializeOnLoad (17ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (18ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 2.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3148 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (57.3 KB). Loaded Objects now: 3616.
+Memory consumption went from 132.8 MB to 132.8 MB.
+Total: 2.937800 ms (FindLiveObjects: 0.283700 ms CreateObjectMapping: 0.087100 ms MarkObjects: 2.467800 ms  DeleteObjects: 0.098100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2460.153000 seconds.
+  path: Assets/Prefabs/Character/C06.prefab
+  artifactKey: Guid(263a5efd42e73ea418d16716077d008c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Character/C06.prefab using Guid(263a5efd42e73ea418d16716077d008c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cdc5c26c8878ab69859207aa75c00da') in 0.171682 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 458
+========================================================================
+Received Import Request.
+  Time since last request: 3.235948 seconds.
+  path: Assets/Prefabs/Character/C06.prefab
+  artifactKey: Guid(263a5efd42e73ea418d16716077d008c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Character/C06.prefab using Guid(263a5efd42e73ea418d16716077d008c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cabfd294e03dc54dc6dd431dd5851bd') in 0.043719 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 458
+========================================================================
+Received Import Request.
+  Time since last request: 719.839785 seconds.
+  path: Assets/Prefabs/Character/C06.prefab
+  artifactKey: Guid(263a5efd42e73ea418d16716077d008c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Character/C06.prefab using Guid(263a5efd42e73ea418d16716077d008c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ed9a32927711a63bb634df84b33fcc6') in 0.361985 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 458
+========================================================================
+Received Import Request.
+  Time since last request: 3802.834019 seconds.
+  path: Assets/PBR Industrial pack/Prefabs
+  artifactKey: Guid(6804d9d2656942d47a005fc34ca961e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs using Guid(6804d9d2656942d47a005fc34ca961e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d29a68e81dffa75fa74d428759c354c') in 0.009126 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.011457 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Big Energy clean.prefab
+  artifactKey: Guid(53759ad6bda29f643a16e4ad3d2c321b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Big Energy clean.prefab using Guid(53759ad6bda29f643a16e4ad3d2c321b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6df3e76ec5813d129f2b11f64cad659d') in 0.316298 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Small Gas balloon clean.prefab
+  artifactKey: Guid(4b30809e58ab3cb498c3297a879421f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Small Gas balloon clean.prefab using Guid(4b30809e58ab3cb498c3297a879421f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '875c110141d22b338499b1f56a59cd1a') in 0.159140 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Big hammer clean.prefab
+  artifactKey: Guid(9edc923b69403134799adea9951f74b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Big hammer clean.prefab using Guid(9edc923b69403134799adea9951f74b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '764bae6e8a06fa13f572e0bc7f2ecb1b') in 0.150828 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Box wood box neglected.prefab
+  artifactKey: Guid(34dc1cb6c4cbf324e89df58167e216bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Box wood box neglected.prefab using Guid(34dc1cb6c4cbf324e89df58167e216bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ae4f942efddc2e92f2b3e6f62731111') in 0.198812 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Paint can green clean.prefab
+  artifactKey: Guid(af916b33c521feb4ba676d05347e93ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Paint can green clean.prefab using Guid(af916b33c521feb4ba676d05347e93ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7860fb5593a2fb5f4b6a117966255b03') in 0.195425 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Crate clean.prefab
+  artifactKey: Guid(a9f9ea54b6e8cfa4b8d72f976fc1461c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Crate clean.prefab using Guid(a9f9ea54b6e8cfa4b8d72f976fc1461c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74898af5cadd5aaa4599b65a8a50a16e') in 0.346588 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/shovel clean.prefab
+  artifactKey: Guid(cc8d50f88c9b979478292cbd6fced446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/shovel clean.prefab using Guid(cc8d50f88c9b979478292cbd6fced446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9dd6f6560deedd3b616f0f5789aed66') in 0.169855 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Lamp neglected.prefab
+  artifactKey: Guid(f83b2c98374bb6a4bbc82059574f052e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Lamp neglected.prefab using Guid(f83b2c98374bb6a4bbc82059574f052e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7335452e3e4f28c24f23e2f629c41a25') in 0.134158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Canister_neglected.prefab
+  artifactKey: Guid(620228a71a0930b40bed1fec08871910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Canister_neglected.prefab using Guid(620228a71a0930b40bed1fec08871910) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4431e40cecc915961f0fafaf97f0e2b') in 0.111522 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Clamp clean.prefab
+  artifactKey: Guid(3c621c97887ceee4ba9dc93304e3863d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Clamp clean.prefab using Guid(3c621c97887ceee4ba9dc93304e3863d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fc7ca769a72d0e1b5933141ad342634') in 0.141156 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Small Gas balloon neglected.prefab
+  artifactKey: Guid(8b5ef3cad5d965446b062ef0ffdd8781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Small Gas balloon neglected.prefab using Guid(8b5ef3cad5d965446b062ef0ffdd8781) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f62e23ae98ab3344d7c57dd02f9cb881') in 0.083020 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Crate neglected.prefab
+  artifactKey: Guid(254551af2a803504bb823e2f6ca88741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Crate neglected.prefab using Guid(254551af2a803504bb823e2f6ca88741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14fda4b58b7ce3caac8a7287a473e270') in 0.132294 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Wire_3.prefab
+  artifactKey: Guid(015deb49f450e7c468815f1bc3e8b3c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Wire_3.prefab using Guid(015deb49f450e7c468815f1bc3e8b3c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '843ff18c32b295270b9603aa6bb7e89c') in 0.017106 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/shovel neglected.prefab
+  artifactKey: Guid(b4cb23904c5b4e443bc53b8ace1179b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/shovel neglected.prefab using Guid(b4cb23904c5b4e443bc53b8ace1179b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '308c2da5af84e79fd7f29520eb012962') in 0.104027 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Paint can red clean.prefab
+  artifactKey: Guid(093a66371e6c105489e781a69835f1c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Paint can red clean.prefab using Guid(093a66371e6c105489e781a69835f1c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f073ce001d65f2239eb7696ed1409cbf') in 0.061829 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Lamp clean.prefab
+  artifactKey: Guid(89c1e45dc8975774987d686f125a869c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Lamp clean.prefab using Guid(89c1e45dc8975774987d686f125a869c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d252bdc41e9da935ffbaed29c68b642') in 0.101659 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Paint can blue clean.prefab
+  artifactKey: Guid(fb4735487f595d74e8d044d59108182b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Paint can blue clean.prefab using Guid(fb4735487f595d74e8d044d59108182b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '629f615354dee406dcf7f5781abbaa57') in 0.030607 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Table clean.prefab
+  artifactKey: Guid(9589c2cab8dabd244bc81ec4b7b86822) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Table clean.prefab using Guid(9589c2cab8dabd244bc81ec4b7b86822) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '098a45399353d2623527f1f01ffd4b46') in 0.085613 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/PBR Industrial pack/Prefabs/Box neglected.prefab
+  artifactKey: Guid(1517e24a8fc5e2940b119cec5ac4257d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PBR Industrial pack/Prefabs/Box neglected.prefab using Guid(1517e24a8fc5e2940b119cec5ac4257d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19701fa2091bbe3c4b77c0a69fb32e68') in 0.076534 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 16.200086 seconds.
+  path: Assets/Vefects/Free Fire VFX
+  artifactKey: Guid(685306ff29a5e8045b37a053075c5cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vefects/Free Fire VFX using Guid(685306ff29a5e8045b37a053075c5cad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5796b0430f42c4697c49e000c6e0bbc') in 0.000629 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 5.626132 seconds.
+  path: Assets/Vefects/Free Fire VFX/Particles
+  artifactKey: Guid(62974bf266813b4459a829321ae493fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vefects/Free Fire VFX/Particles using Guid(62974bf266813b4459a829321ae493fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f71f13fd83bb06ce04b1745a0ffaac0b') in 0.000484 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.068824 seconds.
+  path: Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_01_Big.prefab
+  artifactKey: Guid(e91fa0fac941e714e8c4d5709097019f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_01_Big.prefab using Guid(e91fa0fac941e714e8c4d5709097019f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f791b4f3c52e48943b070e858fc19812') in 0.361952 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 55
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_Floor_02_Simple.prefab
+  artifactKey: Guid(2367bf03da674184783a4254456143c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_Floor_02_Simple.prefab using Guid(2367bf03da674184783a4254456143c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8d71d762e1530eefe74e070497d9f05') in 0.138067 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 35
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_Floor_01_Smoke.prefab
+  artifactKey: Guid(7e8d30e7be9957c43862563919b4cbcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_Floor_01_Smoke.prefab using Guid(7e8d30e7be9957c43862563919b4cbcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51f56ddf6ebdb233cc288b8fcf580309') in 0.036891 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 65
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_Floor_01_Simple.prefab
+  artifactKey: Guid(858e79faf6de940498a11b25374053d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_Floor_01_Simple.prefab using Guid(858e79faf6de940498a11b25374053d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6dde58fc327461bc3d8e31de0126df1') in 0.016874 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 36
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_01_Medium_Smoke.prefab
+  artifactKey: Guid(e01f2e62cf41a3449be2dade3b2c2d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_01_Medium_Smoke.prefab using Guid(e01f2e62cf41a3449be2dade3b2c2d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '371b1d82078aeb7d6b1835b4c51b9195') in 0.018709 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 70
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_Floor_02.prefab
+  artifactKey: Guid(11fa2034a1fc7ed40b0a644fa680c340) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vefects/Free Fire VFX/Particles/VFX_Fire_Floor_02.prefab using Guid(11fa2034a1fc7ed40b0a644fa680c340) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5eac857fd9bfe47868713fce33f9b808') in 0.015797 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 49
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.682 seconds
+Refreshing native plugins compatible for Editor in 3.35 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Failed to load: C:/Program Files/Unity/Hub/Editor/2022.3.12f1/Editor/Data/PlaybackEngines/iOSSupport\x64\UnityEditor.iOS.Native.dll
+Native extension for iOS target not found
+Native extension for Android target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.162 seconds
+Domain Reload Profiling: 1840ms
+	BeginReloadAssembly (244ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (72ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (344ms)
+		LoadAssemblies (452ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (15ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (1163ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (585ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (53ms)
+			SetLoadedEditorAssemblies (5ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (131ms)
+			ProcessInitializeOnLoadAttributes (349ms)
+			ProcessInitializeOnLoadMethodAttributes (29ms)
+			AfterProcessingInitializeOnLoad (19ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (16ms)
+Refreshing native plugins compatible for Editor in 3.19 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3139 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 23 unused Assets / (31.0 KB). Loaded Objects now: 3631.
+Memory consumption went from 134.6 MB to 134.6 MB.
+Total: 3.386400 ms (FindLiveObjects: 0.360000 ms CreateObjectMapping: 0.088500 ms MarkObjects: 2.865200 ms  DeleteObjects: 0.071000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:CustomObjectIndexerAttribute: 756ad292c208cfabdd7b50bc23989ffe -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

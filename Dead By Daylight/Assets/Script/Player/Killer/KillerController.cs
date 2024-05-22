@@ -11,8 +11,18 @@ using UnityEngine.Playables;
 public class KillerController : MonoBehaviour
 {
     [SerializeField] private Collider weaponCollider;
+    public GameObject anotherWeapon;
+    public Camera camera;
 
     KillerStat killer_Stat;
+
+    public Animator killerAnimator;
+
+    public GameObject bulletPrefab;
+    public List<GameObject> effectList;
+    public Transform leftShootPos;
+    public Transform rightShootPos;
+
 
     Rigidbody killRigid;
     Vector3 killPos;
@@ -21,6 +31,7 @@ public class KillerController : MonoBehaviour
     {
         killer_Stat = GetComponent<KillerStat>();
         killRigid = GetComponent<Rigidbody>();
+        killerAnimator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -30,24 +41,62 @@ public class KillerController : MonoBehaviour
             KillerMove();
             KillerAbillity();
         }
+        if (killer_Stat.isWarrios == true)
+        {
+            KillerRotate();
+            KillerMove();
+            KillerAbillity();
+        }
+
+    }
+
+    // https://funfunhanblog.tistory.com/40
+    private void KillerRotate()
+    {
+        Ray cameraRay = camera.ScreenPointToRay(Input.mousePosition);
+
+        Plane GroupPlane = new Plane(Vector3.up, Vector3.zero);
+
+        float rayLength;
+
+        if (GroupPlane.Raycast(cameraRay, out rayLength))
+
+        {
+
+            Vector3 pointTolook = cameraRay.GetPoint(rayLength);
+
+            transform.LookAt(new Vector3(pointTolook.x, transform.position.y, pointTolook.z));
+
+        }
 
     }
 
     //  움직임 함수
     private void KillerMove()
     {
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
         Vector3 moveHorizontal = transform.right * x;
         Vector3 moveVertical = transform.forward * z;
 
+        Vector3 movement = moveHorizontal + moveVertical;
+
+        if(movement.magnitude > 0)
+        {
+            killerAnimator.SetBool("BMove", true);
+        }
+        else
+        {
+            killerAnimator.SetBool("BMove", false);
+        }
+
         killPos = (moveHorizontal + moveVertical).normalized * killer_Stat.moveSpeed * Time.deltaTime;
         killRigid.MovePosition(transform.position + killPos);
     }
 
-
-    private void KillerAbillity()
+private void KillerAbillity()
     {
         // 살인마가 행동중이지 않을때
         // 좌클릭을 하면 타격을 실행한다.
@@ -77,7 +126,9 @@ public class KillerController : MonoBehaviour
     IEnumerator Attack()
     {
         killer_Stat.isActive = true;
-        // animator 좌클릭 trigger;
+
+        killerAnimator.SetTrigger("TriggerAttack");
+
         Debug.Log("좌클릭 타격 실행");
 
         // 좌클릭을 눌렀을 때 Weapon collider가 active 되도록 하기
@@ -85,6 +136,7 @@ public class KillerController : MonoBehaviour
         weaponCollider.enabled = true;
         yield return new WaitForSeconds(killer_Stat.activeCount);
         weaponCollider.enabled = false;
+        
 
         // 연속행동을 하지 못하도록 쿨타임이 지난후에 false가 되도록 조건을 걸어둠.
         killer_Stat.isActive = false;
@@ -92,12 +144,59 @@ public class KillerController : MonoBehaviour
 
     IEnumerator SpecialAbility()
     {
+        /*총구의 위치에서
+
+1. 발포 이펙트($)가 나오고
+2. 0.n초뒤 총알이 나와서 앞으로 향한다
+
+3. 이 총알은 생존자에 닿으면, 
+맞은 이펙트(&) + hp 감소
+이후에 터지는 이펙트(*)
+
+4. 닿지 않으면,
+일정 시간후에 터지는 이펙트(*)*/
+        // 특수 능력 실행
         killer_Stat.isActive = true;
-        // 해당 능력을 사용한다.
-        // Trigger로 애니메이션 처리
-        Debug.Log("특수능력 실행");
-        yield return new WaitForSeconds(killer_Stat.activeCount);
+
+        // 숨겨둔 총을 꺼내서 발사 애니메이션을 취한다.
+        anotherWeapon.SetActive(true);
+        killerAnimator.SetBool("BShoot", true);
+
+        yield return new WaitForSeconds(0.2f);
+        // 총구의 위치에서 발포 이펙트와 함께 총알이 나온다.
+        effectList[0].SetActive(true);
+
+        GameObject leftBullet = Instantiate(bulletPrefab, leftShootPos);
+        GameObject rightBullet = Instantiate(bulletPrefab, rightShootPos);
+
+        // 총알이 앞으로 향하도록 한다.
+        Rigidbody leftRigid = leftBullet.GetComponent<Rigidbody>();
+        Rigidbody rightRigid = rightBullet.GetComponent<Rigidbody>();
+
+        leftRigid.velocity = Vector3.forward;
+        rightRigid.velocity = Vector3.forward;
+
+        yield return new WaitForSeconds(1f);
+        // n초 후에 폭발 이펙트를 실행하고 사라진다.
+        effectList[1].SetActive(true);
+
+        leftBullet.SetActive(false);
+        rightBullet.SetActive(false);
+
+        // 발포가 끝났기 때문에 다른 무기 사용이 가능해진다.
+
+        yield return new WaitForSeconds(0.5f);
+        anotherWeapon.SetActive(false);
+        killerAnimator.SetBool("BShoot", false);
         killer_Stat.isActive = false;
+
+    }
+
+    public void SetKillerHealth()
+    {
+        killer_Stat.health--;
+        Debug.Log("생존자의 공격으로 다쳤습니다.");
     }
 
 }
+

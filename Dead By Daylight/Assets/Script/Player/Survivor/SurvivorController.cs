@@ -189,7 +189,7 @@ public class SurvivorController : MonoBehaviour
         }
     }
 
-    public void Sethealth()
+    public bool Sethealth()
     {
         if(isSuperMode == false && surv_Stat.health == 2)
         {
@@ -197,12 +197,20 @@ public class SurvivorController : MonoBehaviour
             Debug.Log("살인마의 공격으로 다쳤습니다.");
             Debug.Log(surv_Stat.health);
             StartCoroutine(SuperMode());
+
+            return true;
         }
-        if(isSuperMode == false && surv_Stat.health == 1)
+        if (isSuperMode == false && surv_Stat.health == 1)
         {
             surv_Stat.health--;
             Debug.Log("살인마의 공격으로 다쳤습니다.");
             Debug.Log(surv_Stat.health);
+
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 

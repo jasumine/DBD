@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
         playerPos = transform.parent;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         mouseX += Input.GetAxis("Mouse X") * cameraSpeed;
         mouseY += Input.GetAxis("Mouse Y") * cameraSpeed;

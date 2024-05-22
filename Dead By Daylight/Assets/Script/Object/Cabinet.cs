@@ -75,7 +75,7 @@ public class Cabinet : MonoBehaviour
                 // space를 누른 경우
                 if(Input.GetKeyDown(KeyCode.Space))
                 {
-                    // 열었다가 닫는 애니메이션
+                    
                 }
                 
             }

@@ -6,6 +6,7 @@ public class SurvivorStat : MonoBehaviour
 {
     public bool isAI = false;
 
+    public Animator survAnimator;
     public Vector3 surPos;
     public Rigidbody surRigid;
     public float moveSpeed = 10;
@@ -57,9 +58,6 @@ public class SurvivorStat : MonoBehaviour
     public float speedStrugle = 0;
     public bool isInputA;
     public bool isInputD;
-
-
-    // 
 
 
 }
