@@ -165,6 +165,8 @@ private void KillerAbillity()
         yield return new WaitForSeconds(0.2f);
         // 총구의 위치에서 발포 이펙트와 함께 총알이 나온다.
         effectList[0].SetActive(true);
+        effectList[1].SetActive(true);
+
 
         GameObject leftBullet = Instantiate(bulletPrefab, leftShootPos);
         GameObject rightBullet = Instantiate(bulletPrefab, rightShootPos);
@@ -173,21 +175,30 @@ private void KillerAbillity()
         Rigidbody leftRigid = leftBullet.GetComponent<Rigidbody>();
         Rigidbody rightRigid = rightBullet.GetComponent<Rigidbody>();
 
-        leftRigid.velocity = Vector3.forward;
-        rightRigid.velocity = Vector3.forward;
+        leftRigid.velocity = leftBullet.transform.forward * 7f;
+        rightRigid.velocity = rightBullet.transform.forward * 7f;
 
-        yield return new WaitForSeconds(1f);
-        // n초 후에 폭발 이펙트를 실행하고 사라진다.
-        effectList[1].SetActive(true);
+        leftBullet.transform.parent = null;
+        rightBullet.transform.parent = null;
 
-        leftBullet.SetActive(false);
-        rightBullet.SetActive(false);
+
+        // 총알이 생성 됬기 때문에
+        // 총알의 충돌처리를 bullet 에서 해준다.
+        //
+        // <bullet함수>
+        // 1.5초 동안 아무것도 닿지 않으면 터지고,
+        // 만약 생존자와 닿았다면 그 즉시 생존자는 죽고, 터진다.
+        
 
         // 발포가 끝났기 때문에 다른 무기 사용이 가능해진다.
-
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1.5f);
         anotherWeapon.SetActive(false);
+
         killerAnimator.SetBool("BShoot", false);
+
+        effectList[0].SetActive(false);
+        effectList[1].SetActive(false);
+
         killer_Stat.isActive = false;
 
     }

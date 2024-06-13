@@ -43,7 +43,7 @@ public class AIWarriorsMode : MonoBehaviour
     {
         if(surv_Stat.isAI==true)
         {
-            if (surv_Stat.health == 0)
+            if (surv_Stat.health <= 0)
             {
                 aiWarrios = AISWarriosStates.Die;
             }
